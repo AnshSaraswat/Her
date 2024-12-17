@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Flowers for Shrishti</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .flower {
+            width: 200px;
+            height: 200px;
+        }
+        .date {
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
+        .love-message {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: 1.25rem;
+            font-style: italic;
+        }
+        .heart {
+            font-size: 3rem;
+            color: #ff6f61;
+        }
+    </style>
+    <script>
+        const quotes = [
+            "You are my sun, my moon, and all my stars.",
+            "Love is not about how many days we spend together, but about how much we love each other every day.",
+            "In you, I found my forever.",
+            "Every love story is beautiful, but ours is my favorite.",
+            "You are the first and last thought of my day.",
+            "Together is my favorite place to be.",
+            "I never want to stop making memories with you.",
+            "You make my heart smile in a way nothing else can."
+        ];
+
+        function displayContent() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+
+            document.getElementById('date').innerText = `Today is ${formattedDate}`;
+            document.getElementById('quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+    </script>
+</head>
+<body onload="displayContent()">
+    <div class="container">
+        <img src="C:\Users\ANSHKUMARSARASWAT\OneDrive\Desktop\New folder\Lotus GIF - Lotus - Discover & Share GIFs.gif" alt="Animated Lotus Flower" class="flower">
+        <div class="date" id="date"></div>
+        <div class="love-message">Annu Badmosh loves you! ❤️</div>
+        <div class="quote" id="quote"></div>
+    </div>
+</body>
+</html>
